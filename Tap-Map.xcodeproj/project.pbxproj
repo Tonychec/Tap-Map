@@ -12,6 +12,7 @@
 		CCBB0C1D1F8CB38000C51F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBB0C1B1F8CB38000C51F9A /* Main.storyboard */; };
 		CCBB0C1F1F8CB38000C51F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBB0C1E1F8CB38000C51F9A /* Assets.xcassets */; };
 		CCBB0C221F8CB38000C51F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBB0C201F8CB38000C51F9A /* LaunchScreen.storyboard */; };
+		CCD7A5341F8E524D0011FD75 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7A5331F8E524D0011FD75 /* DroppablePin.swift */; };
 		DD990FB45D9D6DC14763D2ED /* Pods_Tap_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2D77937867CA1F5423FC9B /* Pods_Tap_Map.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		CCBB0C1E1F8CB38000C51F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCBB0C211F8CB38000C51F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCBB0C231F8CB38000C51F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCD7A5331F8E524D0011FD75 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +72,8 @@
 		CCBB0C161F8CB38000C51F9A /* Tap-Map */ = {
 			isa = PBXGroup;
 			children = (
-				CCBB0C2C1F8CB3BC00C51F9A /* Extensions */,
-				CCBB0C2B1F8CB3B300C51F9A /* Utilities */,
+				CCD7A5321F8E523A0011FD75 /* View */,
 				CCBB0C2A1F8CB39500C51F9A /* Controller */,
-				CCBB0C291F8CB38E00C51F9A /* View */,
 				CCBB0C171F8CB38000C51F9A /* AppDelegate.swift */,
 				CCBB0C1B1F8CB38000C51F9A /* Main.storyboard */,
 				CCBB0C1E1F8CB38000C51F9A /* Assets.xcassets */,
@@ -81,13 +81,6 @@
 				CCBB0C231F8CB38000C51F9A /* Info.plist */,
 			);
 			path = "Tap-Map";
-			sourceTree = "<group>";
-		};
-		CCBB0C291F8CB38E00C51F9A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		CCBB0C2A1F8CB39500C51F9A /* Controller */ = {
@@ -98,18 +91,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CCBB0C2B1F8CB3B300C51F9A /* Utilities */ = {
+		CCD7A5321F8E523A0011FD75 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCD7A5331F8E524D0011FD75 /* DroppablePin.swift */,
 			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		CCBB0C2C1F8CB3BC00C51F9A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
+			path = View;
 			sourceTree = "<group>";
 		};
 		E94CB1CEE6CA3EE4E90D5C99 /* Frameworks */ = {
@@ -244,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCBB0C1A1F8CB38000C51F9A /* MapVC.swift in Sources */,
+				CCD7A5341F8E524D0011FD75 /* DroppablePin.swift in Sources */,
 				CCBB0C181F8CB38000C51F9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
