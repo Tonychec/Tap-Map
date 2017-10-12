@@ -43,7 +43,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         collectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: "photoCell")
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        collectionView?.backgroundColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+        collectionView?.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         
         pullUpView.addSubview(collectionView!)
     }
@@ -139,6 +139,10 @@ extension MapVC: MKMapViewDelegate {
         removeProgressLbl()
         cancelAllSessions()
         
+        imageArray = []
+        imageUrlArray = []
+        collectionView?.reloadData()
+        
         animateViewUp()
         addSwipe()
         addSpinner()
@@ -172,15 +176,13 @@ extension MapVC: MKMapViewDelegate {
     }
     
     func retrieveUrls(forAnnotation annotation: DroppablePin, heandler: @escaping (_ status: Bool) -> ()) {
-        imageUrlArray = []
-        
         Alamofire.request(flickrUrl(forApiKey: API_KAY, withAnnotation: annotation, andNumberOfPhotos: 40)).responseJSON { (response) in
             guard let json = response.result.value as? Dictionary<String, AnyObject>  else { return }
             let photosDict = json["photos"] as! Dictionary<String, AnyObject>
             let photoDictArray = photosDict["photo"] as! [Dictionary<String, AnyObject>]
             
             for photo in photoDictArray {
-                let postUrl = "https://farm\(photo["farm"]!).staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_q_d.jpg"
+                let postUrl = "https://farm\(photo["farm"]!).staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_h_d.jpg"
                 self.imageUrlArray.append(postUrl)
             }
             heandler(true)
@@ -188,8 +190,6 @@ extension MapVC: MKMapViewDelegate {
     }
     
     func retrieveImages(heandler: @escaping (_ status: Bool) -> ()) {
-        imageArray = []
-        
         for url in imageUrlArray {
             Alamofire.request(url).responseImage(completionHandler: { (responseImg) in
                 guard let image = responseImg.result.value else { return }
@@ -240,8 +240,13 @@ extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let imageFromIndex = imageArray[indexPath.row]
         let imageView = UIImageView(image: imageFromIndex)
         cell.addSubview(imageView)
-        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else { return }
+        popVC.initData(forImage: imageArray[indexPath.row])
+        present(popVC, animated: true, completion: nil)
     }
 }
 
