@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC614FDA1F8F63C7003E6326 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC614FD91F8F63C7003E6326 /* PhotoCell.swift */; };
 		CCBB0C181F8CB38000C51F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB0C171F8CB38000C51F9A /* AppDelegate.swift */; };
 		CCBB0C1A1F8CB38000C51F9A /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB0C191F8CB38000C51F9A /* MapVC.swift */; };
 		CCBB0C1D1F8CB38000C51F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBB0C1B1F8CB38000C51F9A /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		26094F2E5707B2BC7A56531E /* Pods-Tap-Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap-Map.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tap-Map/Pods-Tap-Map.release.xcconfig"; sourceTree = "<group>"; };
 		7C593D7B1BBAE4AB61C05903 /* Pods-Tap-Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap-Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tap-Map/Pods-Tap-Map.debug.xcconfig"; sourceTree = "<group>"; };
 		AF2D77937867CA1F5423FC9B /* Pods_Tap_Map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tap_Map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC614FD91F8F63C7003E6326 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		CCBB0C141F8CB38000C51F9A /* Tap-Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tap-Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBB0C171F8CB38000C51F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCBB0C191F8CB38000C51F9A /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CCD7A5331F8E524D0011FD75 /* DroppablePin.swift */,
+				CC614FD91F8F63C7003E6326 /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC614FDA1F8F63C7003E6326 /* PhotoCell.swift in Sources */,
 				CCBB0C1A1F8CB38000C51F9A /* MapVC.swift in Sources */,
 				CCD7A5341F8E524D0011FD75 /* DroppablePin.swift in Sources */,
 				CCBB0C181F8CB38000C51F9A /* AppDelegate.swift in Sources */,
@@ -373,6 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E499WX8J48;
 				INFOPLIST_FILE = "Tap-Map/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ios.nomad.Tap-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,6 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E499WX8J48;
 				INFOPLIST_FILE = "Tap-Map/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ios.nomad.Tap-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
