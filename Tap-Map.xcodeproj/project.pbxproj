@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC614FDA1F8F63C7003E6326 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC614FD91F8F63C7003E6326 /* PhotoCell.swift */; };
+		CC614FDD1F8F82BB003E6326 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC614FDC1F8F82BB003E6326 /* Constants.swift */; };
 		CCBB0C181F8CB38000C51F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB0C171F8CB38000C51F9A /* AppDelegate.swift */; };
 		CCBB0C1A1F8CB38000C51F9A /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB0C191F8CB38000C51F9A /* MapVC.swift */; };
 		CCBB0C1D1F8CB38000C51F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBB0C1B1F8CB38000C51F9A /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		7C593D7B1BBAE4AB61C05903 /* Pods-Tap-Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap-Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tap-Map/Pods-Tap-Map.debug.xcconfig"; sourceTree = "<group>"; };
 		AF2D77937867CA1F5423FC9B /* Pods_Tap_Map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tap_Map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC614FD91F8F63C7003E6326 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		CC614FDC1F8F82BB003E6326 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CCBB0C141F8CB38000C51F9A /* Tap-Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tap-Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBB0C171F8CB38000C51F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCBB0C191F8CB38000C51F9A /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CC614FDB1F8F829D003E6326 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CC614FDC1F8F82BB003E6326 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		CCBB0C0B1F8CB38000C51F9A = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		CCBB0C161F8CB38000C51F9A /* Tap-Map */ = {
 			isa = PBXGroup;
 			children = (
+				CC614FDB1F8F829D003E6326 /* Utilities */,
 				CCD7A5321F8E523A0011FD75 /* View */,
 				CCBB0C2A1F8CB39500C51F9A /* Controller */,
 				CCBB0C171F8CB38000C51F9A /* AppDelegate.swift */,
@@ -233,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC614FDD1F8F82BB003E6326 /* Constants.swift in Sources */,
 				CC614FDA1F8F63C7003E6326 /* PhotoCell.swift in Sources */,
 				CCBB0C1A1F8CB38000C51F9A /* MapVC.swift in Sources */,
 				CCD7A5341F8E524D0011FD75 /* DroppablePin.swift in Sources */,
